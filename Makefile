@@ -1,4 +1,4 @@
-OBJS = minimax.o board.o eval.o main.o
+OBJS = minimax.o board.o io.o eval.o main.o
 CC = clang
 EXE = engine
 
@@ -11,10 +11,13 @@ minimax.o:
 board.o:
 	$(CC) -c board.c
 
+io.o: board.o
+	$(CC) -c io.c
+
 eval.o: board.o
 	$(CC) -c eval.c
 
-main.o: minimax.o board.o eval.o
+main.o: minimax.o board.o io.o eval.o
 	$(CC) -c main.c
 
 clean:
