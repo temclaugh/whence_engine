@@ -3,6 +3,6 @@
 #include "board.h"
 
 int main(void) {
-  board empty_board;
-  printf("test %p\n", &empty_board);
+  piece_t my_piece;
+  printf("test %p\n", &my_piece);
 }
